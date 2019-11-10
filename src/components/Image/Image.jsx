@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './Image.module.scss';
 
 export default function Image(props) {
-    const dynamStyle = {};
-    if ('maxHeight' in props) {
-        dynamStyle['maxHeight'] = props.maxHeight;
-    }
+    const dynamStyle = {
+        maxHeight: props.maxHeight
+    };
+
     return <img
         src={props.src}
         style={dynamStyle}

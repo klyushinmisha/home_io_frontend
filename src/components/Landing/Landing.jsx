@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Image from '../Image/Image.jsx';
-import home from '../../assets/images/landing/home.png';
+import Navbar from './Navbar/Navbar.jsx';
 
 export default function Landing() {
-    return <Image src={home} maxHeight={100}/>
+    return <div>
+        <Navbar/>
+    </div>
 }
