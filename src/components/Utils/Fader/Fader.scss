@@ -1,0 +1,19 @@
+.fadein-init {
+    opacity: 0;
+}
+
+.fadein {
+    opacity: 1.0;
+    -webkit-transition-duration: -webkit-transform 1s;
+    transition-duration: 1s;
+}
+
+.fadeout-init {
+    opacity: 1.0;
+}
+
+.fadeout {
+    opacity: 0;
+    -webkit-transition-duration: -webkit-transform 1s;
+    transition-duration: 1s;
+}
