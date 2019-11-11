@@ -5,6 +5,7 @@
 @import "../../../../../../node_modules/bootstrap/scss/mixins/buttons";
 @import "../../../../../../node_modules/bootstrap/scss/buttons";
 
+@import "../../../../../fonts.scss";
 
 $button-color:              #AB9FF9;
 
@@ -19,8 +20,8 @@ $button-color:              #AB9FF9;
         darken($button-color, 3%)
     );
     color: $white;
-    font-size: 2vh;
-    font-weight: bolder;
+    font-size: $nav-item-fontsize;
+    font-family: 'Rubik-Medium';
 
     &:hover {
         color: $white;

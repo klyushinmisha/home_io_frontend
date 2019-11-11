@@ -7,10 +7,12 @@
 @import "../../../../../node_modules/bootstrap/scss/bootstrap";
 @import "../../../../../node_modules/bootstrap/scss/grid";
 
+@import "../../../../fonts.scss";
+
 
 .navbar-nav {
-    font-size: 2.2vh;
-    font-weight: bolder;
+    font-size: $nav-item-fontsize;
+    font-family: 'Rubik-Medium';
     .nav-item {
         padding-right: 2vh;
         .nav-link {
