@@ -1,0 +1,52 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins/buttons";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+@import "../../../fonts.scss";
+
+.gradient {
+    font-size: 1.2em;
+    padding: 4vh;
+    border-radius: 3vh;
+    border-width: 0;
+    color: $white;
+    font-family: 'Rubik-Regular';
+    display: inline-block;
+    position: relative;
+    opacity: 0.7;
+
+    &::after {
+        z-index: -1;
+        content: '';
+        left: -2vh;
+        top: -2vh;
+        width: calc(100% + 4vh);
+        height: calc(100% + 4vh);
+        border-radius: 3vh;
+        background: inherit;
+        opacity: 0.3;
+        filter: blur(10px);
+        display: block;
+        position: absolute;
+    }
+
+    &:hover,
+    &:focus {
+        color: $white;
+        opacity: 0.9;
+        transition: 0.5s;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    &:not(:hover) {
+        color: $white;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+
+}
