@@ -4,7 +4,7 @@ import './GradientButton.scss';
 
 export default function GradientButton(props) {
     const style = {
-        background: `linear-gradient(to right, ${props.col1}, ${props.col2})`
+        background: `linear-gradient(45deg, ${props.col1}, ${props.col2})`
     }
 
     return <button

@@ -6,7 +6,7 @@
 @import "../../../fonts.scss";
 
 .gradient {
-    font-size: 1.2em;
+    font-size: 1.6em;
     padding: 4vh;
     border-radius: 3vh;
     border-width: 0;
@@ -14,19 +14,19 @@
     font-family: 'Rubik-Regular';
     display: inline-block;
     position: relative;
-    opacity: 0.7;
+    opacity: 0.9;
 
     &::after {
         z-index: -1;
         content: '';
-        left: -2vh;
-        top: -2vh;
-        width: calc(100% + 4vh);
-        height: calc(100% + 4vh);
+        left: -1.5vh;
+        top: -1.5vh;
+        width: calc(100% + 3vh);
+        height: calc(100% + 3vh);
         border-radius: 3vh;
         background: inherit;
-        opacity: 0.3;
-        filter: blur(10px);
+        opacity: 0.5;
+        filter: blur(15px);
         display: block;
         position: absolute;
     }
@@ -34,7 +34,7 @@
     &:hover,
     &:focus {
         color: $white;
-        opacity: 0.9;
+        opacity: 1;
         transition: 0.5s;
     }
 
@@ -44,7 +44,7 @@
 
     &:not(:hover) {
         color: $white;
-        opacity: 0.7;
+        opacity: 0.9;
         transition: 0.5s;
     }
 
