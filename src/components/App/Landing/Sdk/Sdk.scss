@@ -1,0 +1,33 @@
+@import "../../../../fonts.scss";
+
+.sdk {
+    margin-top: 10vh;
+    height: 80vh;
+    .brand {
+        font-family: 'Rubik-Light';
+        font-size: 4em;
+        padding-left: 20vh;
+    }
+
+    .brand-description {
+        font-family: 'Rubik-Light';
+        font-size: 2em;
+    }
+    .sdk_button {
+        margin-top: 16vh;
+        margin-left: 16vh;
+    }
+    .brackets{
+        position: relative;
+        top: -12vh;
+    }
+    .code{
+        height: 38vh;
+        width: 20vw;
+        top:-49vh;
+        position: relative;
+        background-color: #f2f6ff;
+        border: #d5d7ec solid 5px;
+        border-radius: 20px;
+    }
+}
