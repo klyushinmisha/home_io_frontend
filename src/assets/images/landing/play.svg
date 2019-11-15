@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b30257b535439d6df533d168b903318d51c92d0d3e719e4830447b09bb4fe683
-size 1003
+<svg width="719" height="716" viewBox="0 0 719 716" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<path d="M223.471 206.016C223.471 175.224 256.804 155.979 283.471 171.375L633.672 373.564C660.339 388.96 660.339 427.45 633.672 442.846L283.471 645.034C256.804 660.43 223.471 641.185 223.471 610.393L223.471 206.016Z" fill="#DEFFDB"/>
+</g>
+<defs>
+<filter id="filter0_d" x="-16.3223" y="0.250549" width="734.687" height="714.814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="25"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.66 0 0 0 0 1 0 0 0 0 0.575 0 0 0 0.53 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>
