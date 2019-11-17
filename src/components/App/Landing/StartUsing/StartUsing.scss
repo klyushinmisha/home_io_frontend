@@ -1,23 +1,24 @@
 @import "../../../../fonts.scss";
 
+.start-using-filler {
+    height: 10vh;
+}
+
 .start-using {
-    margin-top: 10vh;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
+
     .brand {
         font-family: 'Rubik-Light';
         font-size: 4em;
-        padding-left: 20vh;
-        text-align: center;
     }
 
     .brand-description {
         font-family: 'Rubik-Light';
         font-size: 2em;
-        margin-top: 10vh;
-        margin-left: 8vw;
     }
-    .sdk_button {
-        margin-top: 6vh;
-        margin-left: 12vw;
+
+    .gradient-button-container {
+        margin-top: 15vh;
     }
 }

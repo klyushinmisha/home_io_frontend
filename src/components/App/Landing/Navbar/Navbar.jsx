@@ -4,7 +4,7 @@ import './Navbar.scss';
 import Logo from './Logo/Logo.jsx';
 import LoginNav from './LoginNav/LoginNav';
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [isHidden, setIsHidden] = useState(false);
 
     useEffect(() => {
@@ -36,7 +36,15 @@ export default function Navbar() {
             <Logo maxHeight='5vh'/>
         </a>
         <div className='collapse navbar-collapse'>
-            <ul className='navbar-nav mr-auto'>
+            <ul className='navbar-nav links-nav mr-auto'>
+            {props.links.map((link) => {
+                return <li className='nav-item'>
+                    {/* eslint-disable-next-line */}
+                    <a class="nav-link active" onClick={() => {
+                        props.scrollToItem(link)
+                    }}>{link}</a>
+                </li>
+            })}
             </ul>
             <LoginNav/>
         </div>

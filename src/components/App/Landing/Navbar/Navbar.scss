@@ -6,6 +6,7 @@
 @import "../../../../../node_modules/bootstrap/scss/navbar";
 @import "../../../../../node_modules/bootstrap/scss/grid";
 
+@import "../../../../fonts.scss";
 
 $navbar-dark-color:         #9B8BFF;
 $navbar-light-color:        #C1B7FF;
@@ -23,6 +24,17 @@ $navbar-shadow-color:       #A49FC4;
   
         @include hover-focus {
             color: $white;
+        }
+    }
+
+    .links-nav {
+        margin-left: 4vw;
+        .nav-link {
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
+            cursor: pointer;
+            font-size: 2.2vh;
+            font-family: 'Rubik-Regular';
         }
     }
 }

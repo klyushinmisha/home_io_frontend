@@ -4,11 +4,11 @@
 @import "../../../../../node_modules/bootstrap/scss/grid";
 @import "../../../../fonts.scss";
 
-.sdk-filler {
+.three-steps-filler {
     height: 10vh;
 }
 
-.sdk {
+.three-steps {
     height: 90vh;
 
     .brand {
@@ -21,6 +21,12 @@
         font-size: 2em;
     }
 
+    .step {
+        font-family: 'Rubik-Light';
+        font-size: 0.5em;
+        margin-bottom: 4vh;
+    }
+
     .brackets {
         z-index: -1;
         position: absolute;
@@ -31,7 +37,6 @@
     .sdk-description {
         margin-top: 5vh;
         font-size: 3vh;
-        font-family: 'Rubik-Light';
     }
 
     .button-container {
@@ -47,5 +52,11 @@
         background-color: #f2f6ff;
         border: #d5d7ec solid 5px;
         border-radius: 20px;
+    }
+
+    .background-wires {
+        z-index: -1;
+        position: absolute;
+        margin-top: 40vh;
     }
 }

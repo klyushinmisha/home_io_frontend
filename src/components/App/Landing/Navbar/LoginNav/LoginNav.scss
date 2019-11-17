@@ -10,13 +10,12 @@
 @import "../../../../../fonts.scss";
 
 
-.navbar-nav {
+.login-nav {
     font-size: $nav-item-fontsize;
     font-family: 'Rubik-Medium';
     .nav-item {
         padding-right: 2vh;
         .nav-link {
-
             @include hover-focus {
                 color: $navbar-dark-hover-color;
             }
