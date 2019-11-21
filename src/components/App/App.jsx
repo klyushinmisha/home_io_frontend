@@ -3,7 +3,7 @@ import './App.css';
 import Landing from './Landing/Landing';
 import store from '../../store'
 import { Provider } from 'react-redux'
-import { Switch, Route, Router } from 'react-router'
+import { Switch, Route } from 'react-router'
 import { withRouter } from 'react-router-dom'
 
 function App() {
