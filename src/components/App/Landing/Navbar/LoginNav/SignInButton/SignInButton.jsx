@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import './SignInButton.scss';
+import './SignInButton.scss'
 
-export default function SignInButton() {
-    return <button className='btn signin-btn'>Регистрация</button>
+export default function SignInButton () {
+  return <button className='btn signin-btn'>Регистрация</button>
 }

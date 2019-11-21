@@ -1,16 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import './GradientButton.scss';
+import './GradientButton.scss'
 
-export default function GradientButton(props) {
-    const style = {
-        background: `linear-gradient(45deg, ${props.col1}, ${props.col2})`
-    }
+export default function GradientButton (props) {
+  const style = {
+    background: `linear-gradient(45deg, ${props.col1}, ${props.col2})`
+  }
 
-    return <button
-            className='btn gradient'
-            style={style}
-            onClick={props.onClick}>
-        {props.children}
+  return (
+    <button
+      className='btn gradient'
+      style={style}
+      onClick={props.onClick}
+    >
+      {props.children}
     </button>
+  )
 }
