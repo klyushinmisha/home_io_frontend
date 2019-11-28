@@ -1,10 +1,7 @@
 import React from 'react'
 
-export default function ScriptList() {
+export default function ScriptList () {
   return (
-    <div>
-
-    </div>
+    <div />
   )
-
 }

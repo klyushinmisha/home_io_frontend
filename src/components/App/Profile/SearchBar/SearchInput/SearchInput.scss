@@ -1,0 +1,22 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../../fonts";
+
+.search-input {
+  border-width: 0;
+  width: 45vh;
+  border-radius: 10px;
+  padding: 1vh 0 1vh 2vh;
+  font-family: 'Rubik-Light';
+
+  &:focus {
+    outline: none;
+  }
+
+  :not(&:empty) {
+    outline: none;
+    background-color: #fff;
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import SearchInput from './SearchInput/SearchInput'
+import SearchBar from './SearchBar/SearchBar'
 
 export default function Profile () {
   return (
     <div>
-      <SearchInput />
+      <SearchBar />
     </div>
   )
 }
