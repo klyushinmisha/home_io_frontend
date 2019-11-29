@@ -13,9 +13,9 @@ function App () {
     <Provider store={store}>
       <Switch>
         <Route path='/' exact component={Landing} />
-        <LoginRequired>
+        {/* <LoginRequired> */}
           <Route path='/profile' exact component={Profile} />
-        </LoginRequired>
+        {/* </LoginRequired> */}
       </Switch>
     </Provider>
   )
