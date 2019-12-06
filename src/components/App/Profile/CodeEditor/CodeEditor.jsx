@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 import GradientButton from '../../../Utils/GradientButton/GradientButton'
+
+import setCode from '../../../../actions/codeActions'
 
 import HomeIoApi from '../../../../homeIoApi'
 
@@ -13,7 +16,8 @@ import '../../../../../node_modules/codemirror/mode/python/python.js'
 import '../../../../../node_modules/codemirror/mode/javascript/javascript.js'
 
 const CodeEditor = () => {
-  const [code, setCode] = useState('# Write your code here')
+  const dispatch = useDispatch()
+  const code = useSelector(state => state.codeReducer.code)
 
   const sendCode = async () => {
     const token = localStorage.getItem('token')
@@ -32,7 +36,8 @@ const CodeEditor = () => {
           lineNumbers: true
         }}
         onBeforeChange={(editor, data, value) => {
-          setCode(value)
+          dispatch(setCode(code))
+          console.log(code)
         }}
       />
       <div className='col-6 text-center'>
