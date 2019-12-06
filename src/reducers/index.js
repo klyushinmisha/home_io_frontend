@@ -1,6 +1,12 @@
 import { combineReducers } from 'redux'
-import user from './user'
+import login from './user'
+import userReducer from './userReducer'
+import codeReducer from './codeReducer'
+import scriptsReducer from './scriptsReducer'
 
 export default combineReducers({
-  user
+  login,
+  userReducer,
+  codeReducer,
+  scriptsReducer
 })
