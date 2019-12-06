@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import './SearchInput.scss'
 import axios from 'axios'
 import DropdownList from '../DropdownList/DropdownList'
-import SearchIcon from "../SearchIcon/SearchIcon";
+import SearchIcon from '../SearchIcon/SearchIcon'
 
 export default function SearchInput () {
   const [devices, setDevices] = useState([])
@@ -38,6 +38,7 @@ export default function SearchInput () {
       ref={inputRef}
       onChange={handleChange}
       type='text'
-      placeholder='Найти устройства'/>
+      placeholder='Найти устройства'
+    />
   )
 }
