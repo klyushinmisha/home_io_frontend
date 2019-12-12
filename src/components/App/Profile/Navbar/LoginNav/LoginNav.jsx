@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './../../../Landing/Navbar/LoginNav/LoginNav.scss'
+import '../../../../Utils/Navbar/LoginNav/LoginNav.scss'
 
 export default function LoginNav () {
   return (

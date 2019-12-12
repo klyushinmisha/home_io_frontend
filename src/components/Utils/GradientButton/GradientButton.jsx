@@ -11,7 +11,7 @@ export default function GradientButton (props) {
     <button
       className='btn gradient'
       style={style}
-      onClick={props.onClick}
+      {...props}
     >
       {props.children}
     </button>

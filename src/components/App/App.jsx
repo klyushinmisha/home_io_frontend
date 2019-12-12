@@ -7,13 +7,19 @@ import store from '../../store'
 import { Provider } from 'react-redux'
 import { Switch, Route } from 'react-router'
 import { withRouter } from 'react-router-dom'
+import SignUp from './Auth/SignUp/SignUp'
+import SignIn from './Auth/SignIn/SignIn'
 
 function App () {
   return (
     <Provider store={store}>
       <Switch>
         <Route path='/' exact component={Landing} />
-        <Route path='/profile' exact component={Profile} />
+        <Route path='/signIn' exact component={SignIn} />
+        <Route path='/signUp' exact component={SignUp} />
+        <LoginRequired>
+          <Route path='/profile' exact component={Profile} />
+        </LoginRequired>
       </Switch>
     </Provider>
   )

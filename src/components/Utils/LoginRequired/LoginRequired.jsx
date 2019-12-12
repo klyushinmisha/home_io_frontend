@@ -3,14 +3,12 @@ import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router'
 
 export default function LoginRequired (props) {
-  const user = useSelector((state) => state.user)
-  const isLoggedIn = Object.keys(user).length !== 0
-
-  console.log(user, isLoggedIn)
+  const token = useSelector((state) => state.userReducer.token)
+  const isLoggedIn = token !== null
 
   return (
     <>
-      {isLoggedIn ? props.children : <Redirect to='/' />}
+      {isLoggedIn ? props.children : <Redirect to='/signIn' />}
     </>
   )
 }

@@ -1,0 +1,29 @@
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../../../../../node_modules/bootstrap/scss/mixins/buttons";
+@import "../../../../../../node_modules/bootstrap/scss/buttons";
+
+@import "../../../../../fonts";
+
+$button-color:              #AB9FF9;
+
+
+.signin-btn {
+    @include button-variant(
+        $button-color,
+        $button-color,
+        $button-color,
+        $button-color,
+        darken($button-color, 3%),
+        darken($button-color, 3%)
+    );
+    color: $white;
+    font-size: $nav-item-fontsize;
+    font-family: 'Rubik-Medium';
+
+    &:hover {
+        color: $white;
+    }
+}

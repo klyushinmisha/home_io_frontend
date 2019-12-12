@@ -1,6 +1,10 @@
+const getToken = () => {
+  // eslint-disable-next-line
+  return localStorage.getItem('token')
+}
 
 const defaultState = {
-  token: '',
+  token: getToken(),
   username: '',
   email: '',
   avatarUrl: ''
@@ -11,10 +15,7 @@ export default function userReducer (state = defaultState, action) {
     case 'USER_INIT':
       return {
         ...state,
-        token: action.token,
-        username: action.username,
-        email: action.email,
-        avatarUrl: action.avatarUrl
+        ...action.payload
       }
     default:
       return {

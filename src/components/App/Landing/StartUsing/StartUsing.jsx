@@ -5,8 +5,11 @@ import Fader from '../../../Utils/Fader/Fader.jsx'
 import GradientButton from '../../../Utils/GradientButton/GradientButton.jsx'
 import play from '../../../../assets/images/landing/play.png'
 import Image from '../../../Utils/Image/Image'
+import { useHistory } from 'react-router'
 
 const StartUsing = React.forwardRef((props, ref) => {
+  const history = useHistory()
+
   return (
     <Fader.In>
       <div className='start-using-filler' ref={ref} />
@@ -30,6 +33,7 @@ const StartUsing = React.forwardRef((props, ref) => {
               <GradientButton
                 col1='#98F7CC'
                 col2='#B2FB8D'
+                onClick={() => history.push('/signUp')}
               >Начать пользоваться
               </GradientButton>
             </div>

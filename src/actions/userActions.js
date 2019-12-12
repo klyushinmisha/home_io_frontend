@@ -1,9 +1,9 @@
-export default function userInit (token, username, email, avatarUrl) {
+export default function userInit (token, username) {
   return {
     type: 'USER_INIT',
-    token: token,
-    username: username,
-    email: email,
-    avatarUrl: avatarUrl
+    payload: {
+      token: token,
+      username: username
+    }
   }
 }

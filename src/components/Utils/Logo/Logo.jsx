@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './Logo.scss'
-import logo from '../../../../../assets/images/logo.svg'
-import Image from '../../../../Utils/Image/Image.jsx'
+import logo from '../../../assets/images/logo.svg'
+import Image from '../Image/Image.jsx'
 
 export default function Logo (props) {
   return (

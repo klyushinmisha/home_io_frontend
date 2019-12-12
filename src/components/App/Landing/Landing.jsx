@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import Navbar from './Navbar/Navbar.jsx'
+import Navbar from '../../Utils/Navbar/Navbar.jsx'
 import Greeting from './Greeting/Greeting.jsx'
 import ThreeSteps from './ThreeSteps/ThreeSteps.jsx'
 import Sdk from './Sdk/Sdk.jsx'

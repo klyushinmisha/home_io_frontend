@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Toggle.scss'
 
 export default function Toggle () {
+  const [isChecked, setIsChecked] = useState(false)
+
+  const classes = ['toggle']
+  if (isChecked) {
+    classes.push('checked')
+  }
   return (
     <div className='row'>
-      <input type='checkbox' id='cbx' />
-      <label htmlFor='cbx' className='toggle'><span /></label>
+      <label
+        onClick={() => setIsChecked(!isChecked)}
+        className={classes.join(' ')}
+      >
+        <span />
+      </label>
     </div>
   )
 }

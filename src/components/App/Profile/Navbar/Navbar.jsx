@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import './../../Landing/Navbar/Navbar.scss'
-import Logo from './../../Landing/Navbar/Logo/Logo.jsx'
+import '../../../Utils/Navbar/Navbar.scss'
+import Logo from '../../../Utils/Logo/Logo.jsx'
 import LoginNav from './LoginNav/LoginNav'
 
 export default function Navbar (props) {
