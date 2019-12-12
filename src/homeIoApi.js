@@ -13,6 +13,17 @@ const login = (username, password) => {
   )
 }
 
+const getScripts = (token) => {
+  return axios.get(
+    `${API_PREFIX}/scripts`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  )
+}
+
 const sendCode = (name, tag, code, token) => {
   return axios.post(
     `${API_PREFIX}/scripts`,
@@ -40,6 +51,7 @@ const build = (scriptId, token) => {
 
 export default {
   login,
+  getScripts,
   sendCode,
   build
 }

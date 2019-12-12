@@ -1,8 +1,16 @@
 @import '../../../../../node_modules/codemirror/lib/codemirror.css';
 @import '../../../../../node_modules/codemirror/theme/material.css';
 
-.code-editor {
+.code-editor-container {
+  height: 70vh;
+}
+
+.CodeMirror {
+  height: 60vh !important;
+}
+
+.code-mirror-editor {
   margin-top: 5vh;
-  height: 37vh;
+  height: 60vh;
   font-size: 1.8em;
 }

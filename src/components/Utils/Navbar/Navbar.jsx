@@ -6,6 +6,8 @@ import LoginNav from './LoginNav/LoginNav'
 import { useHistory } from 'react-router'
 
 export default function Navbar (props) {
+  const handleLogoClick = 'handleLogoClick' in props ? props.handleLogoClick : null
+  const isLoggedIn = 'isLoggedIn' in props ? props.isLoggedIn : true
   const history = useHistory()
 
   const [isHidden, setIsHidden] = useState(false)
@@ -13,7 +15,6 @@ export default function Navbar (props) {
   useEffect(() => {
     let prevPos = window.scrollY
     const handleScroll = () => {
-      console.log(prevPos)
       setIsHidden(window.scrollY > prevPos)
       prevPos = window.scrollY
     }
@@ -37,11 +38,16 @@ export default function Navbar (props) {
 
   const links = 'links' in props ? props.links : []
 
+  const handleClick = {}
+  if (handleLogoClick !== null) {
+    handleClick.onClick = handleLogoClick
+  }
+
   return (
     <nav className={classes.join(' ')}>
       <a
         className='navbar-brand'
-        onClick={() => history.push('/')}
+        {...handleClick}
       >
         <Logo maxHeight='5vh' />
       </a>
@@ -60,7 +66,7 @@ export default function Navbar (props) {
             )
           })}
         </ul>
-        <LoginNav />
+        {isLoggedIn ? null : <LoginNav />}
       </div>
     </nav>
   )

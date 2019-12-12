@@ -1,6 +1,17 @@
-export default function setCurrentPage (currentPage) {
+export function setCurrentPage (currentPage) {
   return {
     type: "SET_CURRENT_PAGE",
-    currentPage:currentPage
+    payload: {
+      currentPage: currentPage
+    }
+  }
+}
+
+export function setScripts (scripts) {
+  return {
+    type: "SET_SCRIPTS",
+    payload: {
+      scripts: scripts
+    }
   }
 }

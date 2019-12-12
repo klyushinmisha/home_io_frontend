@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useHistory } from 'react-router'
 
 import Navbar from '../../Utils/Navbar/Navbar.jsx'
 import Greeting from './Greeting/Greeting.jsx'
@@ -10,6 +11,8 @@ export default function Landing () {
   const descRef = useRef(null)
   const sdkRef = useRef(null)
   const startUsingRef = useRef(null)
+
+  const history = useHistory()
 
   const linkRefMap = {
     'О нас': descRef,
@@ -23,7 +26,12 @@ export default function Landing () {
 
   return (
     <div>
-      <Navbar links={Object.keys(linkRefMap)} scrollToItem={scrollToItem} />
+      <Navbar
+        isLoggedIn={false}
+        handleLogoClick={() => history.push('/')}
+        links={Object.keys(linkRefMap)}
+        scrollToItem={scrollToItem}
+      />
       <Greeting scrollToItem={scrollToItem} />
       <ThreeSteps ref={descRef} />
       <Sdk ref={sdkRef} />
