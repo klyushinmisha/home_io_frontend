@@ -65,7 +65,7 @@ const CodeEditor = () => {
             setCode(value)
           }}
         />
-        <div className='col-6 text-center mt-5'>
+        <div className='col-6 offset-6 text-center mt-5'>
           <GradientButton
             col1='#F46EA8'
             col2='#FBB0AB'

@@ -24,6 +24,29 @@ const getScripts = (token) => {
   )
 }
 
+const getScript = (scriptId, token) => {
+  return axios.get(
+    `${API_PREFIX}/scripts/${scriptId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  )
+}
+
+const switchEnabled = (scriptId, token) => {
+  return axios.post(
+    `${API_PREFIX}/scripts/${scriptId}/switch_enabled`,
+    { },
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  )
+}
+
 const sendCode = (name, tag, code, token) => {
   return axios.post(
     `${API_PREFIX}/scripts`,
@@ -51,7 +74,9 @@ const build = (scriptId, token) => {
 
 export default {
   login,
+  switchEnabled,
   getScripts,
+  getScript,
   sendCode,
   build
 }

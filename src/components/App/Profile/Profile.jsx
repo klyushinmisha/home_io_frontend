@@ -3,7 +3,7 @@ import CodeEditor from './CodeEditor/CodeEditor'
 import Navbar from '../../Utils/Navbar/Navbar'
 import ScriptList from './ScriptList/ScriptList'
 import { Switch, Route } from 'react-router'
-import ScriptData from './ScriptData/ScriptData'
+import CodeViewer from './CodeViewer/CodeViewer'
 
 export default function Profile () {
   return (
@@ -16,7 +16,7 @@ export default function Profile () {
           </div>
           <div className='col-8'>
             <Switch>
-              <Route path='/profile/scripts/:scriptId' component={ScriptData} />
+              <Route path='/profile/scripts/:scriptId' component={CodeViewer} />
               <Route path='/profile' exact component={CodeEditor} />
             </Switch>
           </div>

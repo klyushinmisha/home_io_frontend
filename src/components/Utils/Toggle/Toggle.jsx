@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Toggle.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import { switchEnabled } from '../../../actions/scriptsActions'
 
-export default function Toggle () {
-  const [isChecked, setIsChecked] = useState(false)
+export default function Toggle ({ scriptId, enabled }) {
+  const token = useSelector(
+    state => state.userReducer.token
+  )
+  const dispatch = useDispatch()
 
   const classes = ['toggle']
-  if (isChecked) {
+  if (enabled) {
     classes.push('checked')
   }
   return (
-    <div className='row'>
+    <div className='row justify-content-center text-center'>
       <label
-        onClick={() => setIsChecked(!isChecked)}
+        onClick={() => dispatch(switchEnabled(scriptId, token))}
         className={classes.join(' ')}
       >
         <span />

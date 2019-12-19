@@ -33,12 +33,11 @@
 }
 
 .checked.toggle:before {
-  background: #947ADA;
+  background: #c4b4ff;
 }
 .checked.toggle > span {
-  background: #4F2EDC;
+  background: #857ae3;
   transform: translateX(20px);
-  box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
 }
 .checked.toggle > span:before {
   transform: scale(1);

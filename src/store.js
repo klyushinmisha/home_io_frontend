@@ -1,16 +1,12 @@
 import { createStore, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import reducer from './reducers'
-import homeIoSaga from './effects'
+import thunk from 'redux-thunk'
 
-const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
   applyMiddleware(
-    sagaMiddleware
+    thunk
   )
 )
-
-sagaMiddleware.run(homeIoSaga)
 
 export default store

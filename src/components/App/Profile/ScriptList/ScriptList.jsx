@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ScriptListItem from './ScriptListItem/ScriptListItem'
-import { setCurrentPage, setScripts } from '../../../../actions/scriptsActions'
+import { setScriptId, setScripts } from '../../../../actions/scriptsActions'
+
+import plus from '../../../../assets/images/profile/plus.svg'
+
+import Image from '../../../Utils/Image/Image'
 
 import './scriptList.scss'
 import homeIoApi from '../../../../homeIoApi'
+import { useHistory } from 'react-router'
 
 export default function ScriptList () {
-  const perPage = 5
-  const { scripts, currentPage } = useSelector(state => state.scriptsReducer)
+  const { scripts, scriptId } = useSelector(state => state.scriptsReducer)
   const dispatch = useDispatch()
+
+  const history = useHistory()
 
   useEffect(() => {
     if (scripts !== null) {
@@ -28,30 +34,28 @@ export default function ScriptList () {
     return null
   }
 
-  const pagesCount = Math.ceil(scripts.length / perPage)
-  const pages = []
-  for (let i = 1; i <= pagesCount; i++) {
-    pages.push(i)
+  const handlePress = () => {
+    dispatch(setScriptId(null))
+    history.push('/profile')
   }
 
   return (
     <div>
       {scripts.map(script => {
-        return <ScriptListItem key={script.id} item={script} />
-      })}{/*
-      <div className='row'>
-        {pages.map(page => {
-          return (
-            <span
-              key={page}
-              className={currentPage === page ? 'current_page' : 'page'}
-              onClick={() => dispatch(setCurrentPage(page))}
-            >
-              {page}
-            </span>
-          )
-        })}
-      </div>*/}
+        return <ScriptListItem
+          key={script.id}
+          item={script}
+          selected={script.id === scriptId}
+        />
+      })}
+      <div className='row justify-content-center text-center'>
+        <div
+          className='col'
+          onClick={handlePress}
+        >
+          <Image src={plus} />
+        </div>
+      </div>
     </div>
   )
 }
